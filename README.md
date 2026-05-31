@@ -1,0 +1,1 @@
+# My copier template for starting projects
