@@ -4,5 +4,5 @@ project_name:
     help: What is your project name?
 
 _tasks:
-    - command: "git init"
-      working_directory: "{{ project_name }}"
+    - "git init"
+    - "git add *"
