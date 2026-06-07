@@ -1,8 +1,8 @@
-
 dummy_project_name := "dummy_project"
 
-[working-directory: "dummy_project"]
 test:
+    mkdir {{dummy_project_name}}
+    cd {{dummy_project_name}}
     copier copy --data project_name={{dummy_project_name}} {{justfile_directory()}} . --trust
 
 
