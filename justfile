@@ -1,9 +1,7 @@
 dummy_project_name := "dummy_project"
 
-test:
-    mkdir {{dummy_project_name}}
-    cd {{dummy_project_name}}
-    copier copy --data project_name={{dummy_project_name}} {{justfile_directory()}} . --trust
+test: clear
+    cd {{dummy_project_name}} && copier copy --data project_name={{dummy_project_name}} {{justfile_directory()}} . --trust
 
 
 clear:
@@ -11,4 +9,4 @@ clear:
     mkdir {{dummy_project_name}}
 
 self_regenerate:
-    copier copy --data project_name=project_starter . .. --trust
+    copier copy --data project_name=project_starter . . --trust
