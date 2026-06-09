@@ -1,4 +1,4 @@
-module: "project_starter.com"
+module: "projectstarter.com"
 language: {
 	version: "v0.16.0"
 }
