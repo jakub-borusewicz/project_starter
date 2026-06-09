@@ -22,4 +22,5 @@ class TestProjectGeneration:
         )
 
         # then
-        assert (tmp_path / "test_project").exists()
+        assert generated_project_dir.exists()
+        assert (generated_project_dir / ".git").exists()

@@ -6,3 +6,10 @@ project_name:
 _tasks:
     - "git init"
     - "git add *"
+    - "cue export -f .pre-commit-config.yaml.cue --out yaml --outfile .pre-commit-config.yaml"
+    - "prek run --all-files"
+
+
+_jinja_extensions:
+    - copier_template_extensions.TemplateExtensionLoader
+    - extensions/cue_module_filter/cue_module_filter.py:CueModuleNameFilterExtension

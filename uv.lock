@@ -45,6 +45,18 @@ wheels = [
 ]
 
 [[package]]
+name = "copier-template-extensions"
+version = "0.3.3"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "copier" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/8a/47/1a6638b4323a9eba2f19f4b1364bd77fcdb2b525a1c1cccb1f73422ff97e/copier_template_extensions-0.3.3.tar.gz", hash = "sha256:86bd5e2e89c94b6f9321e4078781b4456c5658b820bcae49ac60fd1e1dd23c10", size = 34991 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c6/da/117372469b9bb1555ae7f8a0b1f3e00345044e6006c50f3f6d3cb20c9843/copier_template_extensions-0.3.3-py3-none-any.whl", hash = "sha256:bf6bbdebada26132640d6e1128723fa1ff7eb59d008de07a7543c51e0facb0ea", size = 9893 },
+]
+
+[[package]]
 name = "dunamai"
 version = "1.26.1"
 source = { registry = "https://pypi.org/simple" }
@@ -202,12 +214,16 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "copier" },
+    { name = "copier-template-extensions" },
+    { name = "jinja2" },
     { name = "pytest" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "copier", specifier = ">=9.15.1" },
+    { name = "copier-template-extensions", specifier = ">=0.3.3" },
+    { name = "jinja2", specifier = ">=3.1.6" },
     { name = "pytest", specifier = ">=9.0.3" },
 ]
 
