@@ -36,3 +36,9 @@ repos:
         language: system
         pass_filenames: true
         files: .*\.cue$
+      - id: cue-auto-export-tool
+        name: cue-auto-export-tool
+        entry: cue cmd cue_auto_export -t pre_commit_input="lala"
+        language: system
+        pass_filenames: false
+        files: .*\.cue$
