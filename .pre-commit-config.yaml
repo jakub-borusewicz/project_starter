@@ -38,7 +38,10 @@ repos:
         files: .*\.cue$
       - id: cue-auto-export-tool
         name: cue-auto-export-tool
-        entry: cue cmd cue_auto_export -t pre_commit_input="lala"
+        entry: bash -c 'for f in "$@"; do cue cmd cue_auto_export -t pre_commit_input="$f"; done' --
+#        entry: xargs -I {} cue cmd cue_auto_export -t pre_commit_input="{}"
+#        entry: cue cmd cue_auto_export -t pre_commit_input="lol"
         language: system
-        pass_filenames: false
+        pass_filenames: true
         files: .*\.cue$
+        exclude: (?x)^(config/.* | cue.mod/.* | project_tool.cue)$
