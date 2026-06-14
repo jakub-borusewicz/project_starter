@@ -38,7 +38,7 @@ command: {
 
 		run_cue_export: exec.Run & Tu.#shell & {
 			_dep: file_extension
-			expression: "cue export \(cue_file_path) --out \(out_param) --outfile \(filepath_without_cue)"
+			expression: "cue export \(cue_file_path) --out \(out_param) --outfile \(filepath_without_cue) --force"
 			stdout: string
 		}
 
