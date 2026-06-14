@@ -14,6 +14,8 @@ command: {
 	cue_auto_export: {
 //		pre_commit_input: [string, ...] @tag(pre_commit_input)
 
+
+
 		write_output: file.Append & {
 			filename: "cue_tool_log.txt"
 			contents: "\n\(pre_commit_input)"

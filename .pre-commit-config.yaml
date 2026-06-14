@@ -44,4 +44,4 @@ repos:
         language: system
         pass_filenames: true
         files: .*\.cue$
-        exclude: (?x)^(config/.* | cue.mod/.* | project_tool.cue)$
+        exclude: (?x)^(config/.* | cue.mod/.* | .*_tool.cue | template/.*)$
