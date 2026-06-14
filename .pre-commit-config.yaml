@@ -36,11 +36,22 @@ repos:
         language: system
         pass_filenames: true
         files: .*\.cue$
+  - repo: local
+    hooks:
+      - id: update-cue-files
+        name: update-cue-files
+        entry: cue fix
+        language: system
+        pass_filenames: true
+      - id: format-cue-files
+        name: format-cue-files
+        entry: cue fmt
+        language: system
+        pass_filenames: true
+        files: .*\.cue$
       - id: cue-auto-export-tool
         name: cue-auto-export-tool
         entry: bash -c 'for f in "$@"; do cue cmd cue_auto_export -t cue_file_path="$f"; done' --
-#        entry: xargs -I {} cue cmd cue_auto_export -t pre_commit_input="{}"
-#        entry: cue cmd cue_auto_export -t pre_commit_input="lol"
         language: system
         pass_filenames: true
         files: .*\.cue$

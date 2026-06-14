@@ -17,9 +17,9 @@ pre_commit
 #local_repo: pre_commit.#Repo & {
 	hooks: [...pre_commit.#Hook]
 }
-#local_repo: pre_commit.repos[4]
-//#local_repo: pre_commit.repos[4] & {
-//	hooks: list.Concat([pre_commit.repos[4].hooks, [#cue_auto_export_hook]])
-//}
+//#local_repo: pre_commit.repos[4]
+#local_repo: pre_commit.repos[4] & {
+	hooks: list.Concat([pre_commit.repos[4].hooks, [#cue_auto_export_hook]])
+}
 
 repos: list.Concat([pre_commit.repos, [#local_repo]])
