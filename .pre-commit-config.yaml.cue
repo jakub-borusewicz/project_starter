@@ -14,6 +14,8 @@ pre_commit
         files: ".*\\.cue$"
         exclude: "(?x)^(config/.* | cue.mod/.* | .*_tool.cue | template/.*)$"
 }
+#local_repo: pre_commit.repos[4] & {
+	hooks: list.Concat([pre_commit.repos[4].hooks, [#cue_auto_export_hook]])
+}
 
-
-repos: list.Concat([pre_commit.repos, []])
+repos: list.Concat([pre_commit.repos, [#local_repo]])
