@@ -12,7 +12,7 @@ import (
 	//	"tool/cli"
 	//		"tool/os"
 	"tool/exec"
-	"tool/file"
+//	"tool/file"
 )
 
 extension_out_map: {
@@ -43,12 +43,6 @@ command: {
 			_dep:       file_extension
 			expression: "cue export \(cue_file_path) --out \(out_param) --outfile \(filepath_without_cue) --force"
 			stdout:     string
-		}
-
-		output_content: out_param
-		write_output: file.Append & {
-			filename: "cue_tool_log.txt"
-			contents: "\n\(output_content)"
 		}
 	}
 }
