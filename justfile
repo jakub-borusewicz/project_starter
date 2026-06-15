@@ -14,3 +14,6 @@ self_regenerate:
 
 test_cue_auto_export:
     prek run cue-auto-export-tool --all-files
+
+pre-commit:
+    prek run --all-files
