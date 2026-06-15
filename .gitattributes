@@ -1,0 +1,2 @@
+*.py merge=copier-block
+*.cue merge=copier-block
