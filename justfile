@@ -12,7 +12,7 @@ self_regenerate:
     copier copy --data project_name=project_starter . . --trust
 
 self_update:
-    COPIER_MERGE=1 copier update --data project_name=project_starter . . --trust
+    COPIER_MERGE=1 copier update --data project_name=project_starter
 
 test_cue_auto_export:
     prek run cue-auto-export-tool --all-files
