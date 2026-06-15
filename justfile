@@ -17,3 +17,6 @@ test_cue_auto_export:
 
 pre-commit:
     prek run --all-files
+
+install_merge_driver:
+    uv run python scripts/copier_merge_driver.py --install
