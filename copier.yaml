@@ -9,7 +9,8 @@ _tasks:
     - command: "git add *"
       when: "{{ _copier_operation == 'copy' }}"
     - "cue mod tidy"
-    - "cue export -f .pre-commit-config.yaml.cue --out yaml --outfile .pre-commit-config.yaml"
+    - command: "cue export -f .pre-commit-config.yaml.cue --out yaml --outfile .pre-commit-config.yaml"
+      when: "{{ _copier_operation == 'copy' }}"
     - "prek run --all-files"
 
 
