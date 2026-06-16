@@ -11,7 +11,8 @@ _tasks:
     - "cue mod tidy"
     - command: "cue export -f .pre-commit-config.yaml.cue --out yaml --outfile .pre-commit-config.yaml"
       when: "{{ _copier_operation == 'copy' }}"
-    - "prek run --all-files"
+    - command: "prek run --all-files"
+      when: "{{ _copier_operation == 'copy' }}"
 
 
 _jinja_extensions:
