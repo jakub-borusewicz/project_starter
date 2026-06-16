@@ -4,8 +4,10 @@ project_name:
     help: What is your project name?
 
 _tasks:
-    - "git init"
-    - "git add *"
+    - command: "git init"
+      when: "{{ _copier_operation == 'copy' }}"
+    - command: "git add *"
+      when: "{{ _copier_operation == 'copy' }}"
     - "cue mod tidy"
     - "cue export -f .pre-commit-config.yaml.cue --out yaml --outfile .pre-commit-config.yaml"
     - "prek run --all-files"
