@@ -8,5 +8,9 @@ dependencies = [
     "copier>=9.15.1",
     "copier-template-extensions>=0.3.3",
     "jinja2>=3.1.6",
+]
+
+[dependency-groups]
+dev = [
     "pytest>=9.0.3",
 ]
