@@ -1,2 +1,3 @@
 dummy_project/*
 .idea
+**/__pycache__/*
