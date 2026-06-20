@@ -216,7 +216,6 @@ dependencies = [
     { name = "copier" },
     { name = "copier-template-extensions" },
     { name = "jinja2" },
-    { name = "pytest" },
 ]
 
 [package.dev-dependencies]
@@ -229,7 +228,6 @@ requires-dist = [
     { name = "copier", specifier = ">=9.15.1" },
     { name = "copier-template-extensions", specifier = ">=0.3.3" },
     { name = "jinja2", specifier = ">=3.1.6" },
-    { name = "pytest", specifier = ">=9.0.3" },
 ]
 
 [package.metadata.requires-dev]
